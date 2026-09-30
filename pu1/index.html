@@ -98,27 +98,48 @@
          class="w-full h-auto rounded-[20px]" width="640" height="1147" fetchpriority="high" />
   </div>
 
-  <div id="wiapy_upsell"></div>
+  <div id="wiapy_upsell" class="mt-9"></div>
   <script>
   initWiapyUpsell({
       linkUrl: "https://pay.wiapy.com/checkout/6abbb9626d1f28f2c39ab0b0",
       linkText: "SIM, EU ACEITO ESSA OFERTA",
       styles: {
-          backgroundColor: "#00d769",
-          hoverBackgroundColor: "#00b85a",
+          backgroundColor: "#F2C14E",
+          hoverBackgroundColor: "#D9A12A",
           fontSize: "17px",
-          borderRadius: "10px"
+          borderRadius: "16px"
       },
       refusalLinkUrl: "https://olimpiadas-biblicas.vercel.app/nwod/",
       refusalLinkText: "Não, prefiro seguir sem esse bônus",
       refusalLinkColor: "#000000"
   });
-  </script>
 
-  <!-- Link de recusa (obrigado ou downsell) — troque o # -->
-  <a href="#" class="mt-5 inline-block text-[11px] font-bold uppercase text-white/70 underline underline-offset-2 hover:text-white">
-    Não, eu prefiro montar tudo sozinho(a)
-  </a>
+  /* Aplica o design antigo (botão dourado com brilho + link de recusa no mesmo estilo) sobre o widget da Wiapy */
+  (function () {
+    function aplicarDesign() {
+      var container = document.getElementById('wiapy_upsell');
+      if (!container) return false;
+      var nodes = container.querySelectorAll('a, button');
+      if (!nodes.length) return false;
+      nodes.forEach(function (node) {
+        var texto = (node.textContent || '').trim();
+        if (/aceito essa oferta/i.test(texto)) {
+          node.removeAttribute('style');
+          node.className = 'btn-cta block w-full rounded-2xl px-4 py-4 font-title font-extrabold text-[17px] leading-tight uppercase';
+        } else if (/prefiro seguir sem esse b.nus/i.test(texto)) {
+          node.removeAttribute('style');
+          node.className = 'mt-5 inline-block text-[11px] font-bold uppercase text-white/70 underline underline-offset-2 hover:text-white';
+        }
+      });
+      return true;
+    }
+    if (!aplicarDesign()) {
+      var alvo = document.getElementById('wiapy_upsell');
+      var obs = new MutationObserver(function () { if (aplicarDesign()) obs.disconnect(); });
+      if (alvo) obs.observe(alvo, { childList: true, subtree: true });
+    }
+  })();
+  </script>
 </main>
 
 </body>
